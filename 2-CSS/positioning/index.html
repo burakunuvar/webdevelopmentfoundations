@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Box Model and Positioning</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h3><strong> Box Model: <a dowload href="http://markusvogl.com/web1/interactive_box_model/css_box_demo.html">CSS Box Model Demo</a>
+    </strong>
+  </h3>
+
+  <h3><strong> Positioning:</strong></h3>
+
+  <ol>
+    <li> <p> "h" "p" "div" "ol" are all block level elements</p> </li>
+    <li> <span> "span" and "a" are inline elements whereas</span> </li>
+    <li>"img" is a kind of inline-block <img width="50px" height="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7415FSK-slCTd9LjEB-LywF9kxEfpcniv_SfmgAXxhcbI2z8w" alt="turtle"></li>
+  </ol>
+
+  <section class="alt1-centralizeParent">
+    <div class="alt1-centralizedChild">
+      <p class="display-block"> -- In this example; the display of the class is updated as BLOCK. (-width can be updated)</p>
+      <p class="display-inline-block"> -- In this example; the display of the class is updated as inline-block. (-width can be updated)</p>
+      <p class="display-inline"> -- In this example; the display of the class is updated as inline.(-width can`t be updated) </p>
+      <p class="display-inline"> -- In this example; the display of the class is updated as inline.(-width can`t be updated) </p>
+      <p class="display-inline-block"> -- In this example; the display of the class is updated as inline-block. (-width can be updated)</p>
+      <p> <strong> <emphasis> RESULT : width can`t be updated for inline elements </emphasis> </strong> </p>
+      <h4 id="invisible">this span will be updated as none when hovered</h4>
+    </div>
+  </section>
+    <hr noshade align="center" size="3">
+
+  <div class="alt2-centralizeAsBlock">
+    <ul>
+      <h4>Static Positioning </h4>
+      <li>content is everything & order comes from code & children sit on parents </li>
+      <li>As seen for classes "alt1-centralizeParent and alt1-centralizedChild" </li>
+      <li>"text-align:center" is needed for parent to centralize elements within a parent element</li>
+      <li>"display: inline-block" is needed for child to centralize elements within a parent element</li>
+
+    </ul>
+      <hr noshade align="center" size="3">
+    <ul>
+      <h4>Relative Positioning </h4>
+      <li class="pwithwidth">If the block element has a width "text-align" will not work : </li>
+      <li class="pwithwidthaligned">so we should use margin: 0 auto 0 auto if there is a width</li>
+      <li><strong> <emphasis>  As also seen for class "alt2-centralizeAsBlock </emphasis> </strong></li>
+      <div class="red1"></div>
+      <div class="blue1"></div>
+      <div class="yellow1"></div>
+      <div class="red2"></div>
+      <div class="blue2"></div>
+      <div class="yellow2"></div>
+      <p>centralized div</p>
+    </ul>
+  </div>
+
+  <hr noshade align="center" size="3">
+
+  <h4> Absolute Positioning </h4>
+
+  <div class="container">
+    <div class="pink">
+
+    </div>
+  </div>
+
+  <div class="purple"></div>
+  <div class="grass"></div>
+  <div class="black"></div>
+
+  <hr noshade align="center" size="3">
+
+  <h4> Wrapping Text Around an Image by float </h4>
+
+  <div class="skill-row">
+    <img class="matrix-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwBEr45BzZ6O96z3X5X9FgL2aU9My6BtceVruKJqkCP9yrEDWVuyHzw" alt="matrix-img">
+    <h4>Design & Development</h4>
+    <p class="matrix-description">use flat attribute only for wrapping purposes ; prefer Relative and Absolute positioning for all others.</p>
+  </div>
+  <br><br>
+  <hr noshade align="center" size="3">
+  <h4> z-index </h4>
+  <div class="containerz">
+
+    <div class="redz">redz</div>
+    <div class="yellowz">yellowz</div>
+    <div class="bluez">bluez</div>
+
+  </div>
+
+  <hr noshade align="center" size="3">
+  <h4> Media Query Breakpoints </h4>
+
+  <p class="mediaquery">media query breakpoints : print </p>
+
+
+  <hr noshade align="center" size="3">
+  <h4> Combining Selectors </h4>
+
+  <p class="ms1"> multiple selectors in the same css line - LINE 1</p>
+  <p class="ms2"> multiple selectors in the same css line - LINE 2</p>
+  <p class="ms3"> multiple selectors in the same css line - LINE 3</p>
+
+  <h4> element.class (no space) vs element. class </h4>
+
+  <p class="hierarchy"> hierarchical selectors used for parent and child- will not change as it p and its class are same level </p>
+
+  <div>
+    <p class="hierarchy"> hierarchical selectors used for parent and child - will change as it class is the child ( css is read from right to left, and there is space between elements)</p>
+  </div>
+
+  <p class="combined"> combined selectors used for same level elements ( css is read from left to right, and there is no space between elements) </p>
+
+
+
+
+</body>
+
+</html>

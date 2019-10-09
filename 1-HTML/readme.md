@@ -1,3 +1,6 @@
+
+- [HTML CHEAT SHEET](https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf)
+
 ### Query Parameters :
 
 Every `GET` request to by an "HTML Form" generates a Query Parameter and adds a string to the end of URL
