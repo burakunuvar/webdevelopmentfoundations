@@ -1,7 +1,8 @@
 // jshint esversion : 8
 
-// reference type
+// reference type 
 // As a diffence to other JS Types ; each object creates its own box in the memory.
+//  all other types are primitive : 1. Number 2. String 3. Boolean 4. Undefined 5. Null
 
 let object1 = {value :1};
 let object2 = object1; // references to where object1 is
@@ -105,9 +106,13 @@ function PlayerOne(name,level){
   };
 }
 
+let p1f = new PlayerOne("burak",10);
+
 PlayerOne.prototype.makeVoice = function(){
   console.log("ACTION!!!");
 };
+
+let p2f = new PlayerOne("pinar",20);
 
 const p1= new PlayerOne("burak",5 );
 
@@ -120,6 +125,46 @@ const w1= new PlayerOne("w1","monster");
 w1.play = function(){
   console.log(`${this.sound}, I am a ${this.type}`);
 };
+
+
+class PlayerOne{
+  constructor(name,level) {
+    this.name = name;
+    this.level = level; 
+  }
+  intro (){
+    console.log(`${this.name}, I am a ${this.level}`);
+  };
+}
+let p1f = new PlayerOne("burak",10);
+
+PlayerOne.prototype.makeVoice = function(){
+  console.log("ACTION!!!");
+};
+
+let p2f = new PlayerOne("pinar",20);
+
+// class Player{
+//   constructor(nameArg,typeArg){
+//     this.name=nameArg;
+//     this.type=typeArg;
+//     console.log("PLAYER" , this);
+//   }
+//   introduce(){
+//     console.log(`Hi I am ${this.name}, I am a ${this.type}`);
+//   }
+// }
+
+
+
+let p1f = new PlayerOne("burak",10);
+
+PlayerOne.prototype.makeVoice = function(){
+  console.log("ACTION!!!");
+};
+
+let p2f = new PlayerOne("pinar",20);
+
 
 /// reminder on Constructor Function
 
@@ -144,3 +189,26 @@ let BellBoy2 ={
           console.log("bb2");
       },
   }
+
+
+// exercise :
+
+
+class Animal {
+  constructor(name,type,color){
+    this.name = name;
+    this.type = type ;
+    this.color = color; 
+  }
+}
+
+class Mamal extends Animal {
+  constructor(name,type,color){
+    super(name, type, color)
+  }
+    sound() {
+    console.log(`Moooo I'm ${this.name} and I'm a ${this.color} ${this.type}`);
+  }
+}
+
+const cow = new Mamal('Shelly', 'cow', 'brown');

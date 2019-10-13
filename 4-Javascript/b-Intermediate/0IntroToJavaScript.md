@@ -196,3 +196,18 @@ Advanced Loops
 **=>** iteration with arrays vs enumerating with objects
  - properties of objects are called enumeral ; they're not iterable
  - arrays and strings are iterable
+
+Coercion 
+----
+- [JS Comparisons](https://dorey.github.io/JavaScript-Equality-Table/)
+- [Object.is ]https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+single threaded language that can be non-blocking.
+---
+- [single-threaded & asynchronous](https://stackoverflow.com/questions/44240367/is-there-a-difference-between-single-thread-and-synchronous)
+
+ES Modules
+----
+[https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/]()
+
+

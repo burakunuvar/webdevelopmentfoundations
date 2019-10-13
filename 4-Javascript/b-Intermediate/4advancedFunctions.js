@@ -1,6 +1,7 @@
 //jshint esversion:6
+// CLOSURE - CURRYING - COMPOSE
 
-// PART1
+// PART1 
 // functions are small universes with their own scope(child)
 //whatever happens in that universe only matters to itself
 // alt1 : Declaration
@@ -82,6 +83,17 @@ const curriedMultOuterLoop = function(a){
   return curriedMultInner;
 };
 
+const joinedOps = function (num1) { 
+  console.log("num1 is provided to start: " + num1);
+  const middleware = function(num2) {
+    console.log("num2 is provided to finalise: " + num2)
+    return num1*num2 ;
+  } 
+  return middleware;
+}
+
+multiplyByNum = joinedOps (Num) ;
+
 const curriedMultEasyWay = (a)=> (b)=> a*b ;
 
 const multiplyBy5 = curriedMultEasyWay(5);
@@ -112,3 +124,53 @@ function updateA (){
 // purity : always return a value, don't use console.log
 // deterministic : returns same value for same arguements
 // This means, that given the same input, the function will always return the same output.
+
+
+
+// Further details :
+// currying = joining consecutive operations
+const joinedOps = function (num1) { 
+  console.log("num1 is provided to start: " + num1);
+  const middleware = function(num2) {
+    console.log("num2 is provided to finalise: " + num2)
+    console.log("middleware was also storing num1 before previous step" );
+    return num1*num2 ;
+  } 
+  return middleware;
+}
+
+multiplyByNum = joinedOps (Num) ;
+const joinedOpsEasier = (num1)=> (num2)=> num1*num2 ;
+const joinedOpsEasier = num1=> num2=> num1*num2 ;
+
+// composing = looping functions
+
+const addOne = function (num1){ 
+  return num1 +1 ;
+};
+const multByTen = function(num2) {
+  return num2 * 10 ;
+}
+const compose = function(f,g) {
+  console.log ("inside the first function - f")
+   const middleware = function(n) {
+    console.log ("inside the middleware ")
+    return f(g(n));
+  };
+  return middleware;
+}
+
+const compose = (f,g) => (a) => f(g(a));
+const addOne = (num) => num+1;
+const multByTen = (num) => num*10;
+compose(addOne,multByTen)
+
+const compose = function (f,g) {
+  return function (a) { 
+    return f(g(a)); 
+  }
+}
+
+
+
+

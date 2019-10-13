@@ -12,7 +12,7 @@ if (age>=30){
 }
 
 // with variable , a scope is created only within a function, not in an if statement
-// with let ,a scope is also created within if statement, or any curly brackets
+// with let ,a scope is also created within if statement, or in any curly brackets
 
 const obj ={
   player : "burak" ,
@@ -38,11 +38,13 @@ let{vote} = obj;
 // Object Properties
 
 const name ="burak unuvar";
+let num = 5 ;
 
 const object = {
   [name]:'hello', // assigns dynamic value to property
   ['ray' + 'smith']: 'hihi',
   [1+2] : "?",
+  [num]: "five";
 };
 
 const a= "aaa";
